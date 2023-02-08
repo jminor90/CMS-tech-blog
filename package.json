@@ -1,0 +1,33 @@
+{
+  "name": "cms-tech-blog",
+  "version": "1.0.0",
+  "description": "A Content Managing System Blog following the Model-View-Controller (MVC) paradigm. Utilizing Express, Handlebars, MySQL2, and Sequlize.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jminor90/CMS-tech-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jminor90/CMS-tech-blog/issues"
+  },
+  "homepage": "https://github.com/jminor90/CMS-tech-blog#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.7",
+    "mysql2": "^3.1.1",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
