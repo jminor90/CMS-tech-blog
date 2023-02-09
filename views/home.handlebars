@@ -1,1 +1,23 @@
-<h1>"This is the Home Handlebar :)"</h1>
+<h2>"This is the Home Handlebar :)"</h2>
+
+{{#each postDataSerialize as |post|}}
+<div class="card">
+  <div class="card-body">
+    <h3>{{{post.title}}}</h3>
+    <p>{{{post.description}}}</p>
+    <p>Date Created: {{{post.date_created}}}</p>
+    <p>by: {{{post.user_id}}}</p>
+    <button class="no-button" id="deletePost" >Delete</button>
+  </div>
+</div>
+{{/each}}
+
+{{!-- <div class="card">
+  <div class="card-body">
+    <h3>Title of Post</h3>
+    <p>Description of post</p>
+    <p>Date Created</p>
+    <p>by Who?</p>
+    <button class="no-button" id="deletePost" >Delete</button>
+  </div>
+</div> --}}
