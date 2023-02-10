@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
     */
 
     const postDataSerialize = postData.map((post)=> post.get({ plain : true }))
-
+    console.log(postDataSerialize)
     res.render('home', {
       postDataSerialize,
       title: "Homepage",
