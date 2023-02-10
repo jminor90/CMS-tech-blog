@@ -1,16 +1,30 @@
-<h2>"This is the Home Handlebar :)"</h2>
+{{#if loggedIn}}
+<h2>Welcome to the Tech Blog!</h2>
+{{else}}
+<h2><a href="/login">Log in</a> to view posts</h2>
+{{/if}}
+
+{{#if loggedIn}}
 
 {{#each postDataSerialize as |post|}}
 <div class="card">
   <div class="card-body">
     <h3>{{{post.title}}}</h3>
     <p>{{{post.description}}}</p>
-    <p>Date Created: {{{post.date_created}}}</p>
-    <p>by: {{{post.user_id}}}</p>
-    <button class="no-button" id="deletePost" >Delete</button>
+    <p>Date Created: {{{format_date post.date_created}}}</p>
+    <p>by: {{{post.user.username}}}</p>
+    {{!--
+    When working with arrays of objects, looking for Post.User.username
+
+    array.[0] - reference for arrays in handlebars for later
+    --}}
+    <button class="button" id="deletePost" data-id="{{post.id}}">Delete</button>
   </div>
 </div>
 {{/each}}
+{{/if}}
+
+<script src="js/deletePost.js"></script>
 
 {{!-- <div class="card">
   <div class="card-body">
