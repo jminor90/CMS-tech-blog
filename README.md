@@ -22,7 +22,7 @@ You may need to install the following packages...
 None
 
 ## Usage
-Link to Application: https://
+Link to Application: https://pure-sands-70023.herokuapp.com/
 
 View application at deployed link. When logged into an account can view, delete, and create new posts. Can also sign up for a new account if need be.
 
